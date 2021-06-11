@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 
-<robot name="a1_description" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="unitree_a1_desc" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:include filename="$(find a1_description)/xacro/const.xacro"/>
-    <xacro:include filename="$(find a1_description)/xacro/materials.xacro"/>
-    <xacro:include filename="$(find a1_description)/xacro/leg.xacro"/>
-    <xacro:include filename="$(find a1_description)/xacro/stairs.xacro"/>
+    <xacro:include filename="$(find unitree_a1_desc)/const.xacro"/>
+    <xacro:include filename="$(find unitree_a1_desc)/materials.xacro"/>
+    <xacro:include filename="$(find unitree_a1_desc)/leg.xacro"/>
+    <xacro:include filename="$(find unitree_a1_desc)/stairs.xacro"/>
     <!-- <xacro:include filename="$(find a1_gazebo)/launch/gazebo.xacro"/> -->
     <!-- <xacro:include filename="$(find a1_gazebo)/launch/stairs.urdf.xacro"/> -->
 
@@ -15,7 +15,7 @@
     <xacro:property name="rolloverProtection" value="false"/>
 
     <!-- Debug mode will hung up the robot, use "true" or "false" to switch it. -->
-    <xacro:if value="$(arg DEBUG)">
+<!--    <xacro:if value="$(arg DEBUG)">
         <link name="world"/>
         <joint name="base_static_joint" type="fixed">
             <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -23,7 +23,7 @@
             <child link="base"/>
         </joint>
     </xacro:if> 
-
+-->
     <link name="base">
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -43,7 +43,7 @@
         <visual>
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://a1_description/meshes/trunk.dae" scale="1 1 1"/>
+                <mesh filename="package://unitree_a1_desc/meshes/trunk.dae" scale="1 1 1"/>
             </geometry>
             <material name="orange"/>
         </visual>
