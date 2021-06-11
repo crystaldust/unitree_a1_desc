@@ -1,0 +1,6 @@
+**/install
+**/build
+**/log
+**/unitree_a1_desc.egg-info
+**/venv
+**/.idea
